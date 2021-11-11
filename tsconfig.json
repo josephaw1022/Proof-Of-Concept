@@ -1,11 +1,7 @@
 {
+  "extends": "./tsconfig.path.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "esnext",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +14,29 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "importHelpers": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ]
+  },
+  "paths": {
+    "@app/*": [
+      "src/*"
+    ]
   },
   "include": [
-    "src"
+    "src",
+    "craco.config.js",
+    "react-app-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
