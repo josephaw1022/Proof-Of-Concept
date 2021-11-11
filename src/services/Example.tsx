@@ -1,5 +1,4 @@
-import React from "react";
-import { makeAutoObservable, observable, computed, action, flow } from "mobx"
+import { makeAutoObservable } from "mobx";
 
 
 class Store{ 
