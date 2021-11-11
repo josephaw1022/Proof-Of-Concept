@@ -25,8 +25,11 @@ export const Home:FC<any> = props => {
                 Welcome to the Tailwind, Mobx, React Router v6, and Typescript proof of concept
             </h1>
             <div className="flex flex-row gap-3 m-3 items-center justify-evenly ">
-                <Link to="/example" >
+                <Link to="/example"  className="bg-blue-400 rounded-lg p-2 m-3">
                     Form Example 
+                </Link>
+                <Link to="/mobx"  className="bg-red-400 rounded-lg p-2 m-3">
+                    Mobx Example 
                 </Link>
             </div>
         </div>
