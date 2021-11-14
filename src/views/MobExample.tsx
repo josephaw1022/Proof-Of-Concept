@@ -4,7 +4,6 @@ import { Header } from "@components/MobXHeader";
 import { store, StoreType } from "@routes/routes";
 import { observer } from "mobx-react";
 import React, { useEffect } from "react";
-import { example_one } from '../../.history/src/services/Example_20211114145835';
 
 export const MobExample = observer(({ example_one, example_two }: StoreType) => {
 
