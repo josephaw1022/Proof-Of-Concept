@@ -1,31 +1,39 @@
 import { makeAutoObservable } from "mobx";
 
 
-class Store{ 
+class ExampleOne {
 
 
-    count: number ; 
+    count: number;
+    hasViewedCountPage: boolean;
 
-    constructor(){
+    constructor() {
         makeAutoObservable(this)
-        this.count= 0 ; 
+        this.count = 0;
+        this.hasViewedCountPage = false;
     }
 
 
-    increment():void{
-        this.count ++ ; 
+    increment() {
+        this.count++;
     }
 
-    decrement():void{ 
-        this.count -- ; 
+    decrement() {
+        this.count--;
     }
 
-    reset():void{
-        this.count = 0 
+    reset() {
+        this.count = 0
     }
 
-    
+    setHasViewedCountPage() {
+        this.hasViewedCountPage = true
+    }
+
+
+
 
 }
 
-export const store = new Store()
+export const example_one = new ExampleOne()
+
