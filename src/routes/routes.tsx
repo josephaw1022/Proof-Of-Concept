@@ -4,22 +4,23 @@ import React, { ReactNode } from 'react'
 import { Home } from "@views/Home"
 import { FormExample } from "@views/FormExample"
 import { MobExample } from '@views/MobExample'
-
+import { ApiExample } from '@views/ApiExample'
 
 
 // State for the page 
-import {example_one } from "@services/Example"
-import { example_two } from  "@services/ExampleTwo"
-
+import { example_one } from "@services/Example"
+import { example_two } from "@services/ExampleTwo"
+import { apiState } from '@services/Sites'
 
 
 // store for our state 
 export const store = {
-    example_one, 
-    example_two 
+    example_one,
+    example_two,
+    apiState
 }
 
-export type StoreType = typeof store ; 
+export type StoreType = typeof store;
 
 
 /**
@@ -37,14 +38,13 @@ interface ROUTES {
  * The Routes of the apps are defined here 
  */
 export const routes: ROUTES[] = [
-
     {
         element: <Home {...store} />,
         path: "",
         exact: true
     },
     {
-        element: <FormExample {...store}  />,
+        element: <FormExample {...store} />,
         path: "/example",
         exact: true
     },
@@ -52,6 +52,11 @@ export const routes: ROUTES[] = [
         element: <MobExample {...store} />,
         path: '/mobx',
         exact: true
+    },
+    {
+        element: <ApiExample {...store} />,
+        path: '/api-example',
+        exact: true,
     }
 
 ]
