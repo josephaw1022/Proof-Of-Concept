@@ -3,7 +3,7 @@ import { StoreType } from "@routes/routes";
 import { observer } from 'mobx-react';
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Navbar } from "../components/Navbar";
+import { Navbar } from "@components/Navbar/Navbar";
 
 
 export const Home = observer((props: StoreType) => {
@@ -32,8 +32,6 @@ export const Home = observer((props: StoreType) => {
         );
     }, [props.example_one])
 
-
-
     return loading ? <Loading /> : (
         <>
             <Navbar title={navbarTitle} />
@@ -48,6 +46,9 @@ export const Home = observer((props: StoreType) => {
                     <Link to="/mobx" className="bg-red-400 rounded-lg p-2 m-3">
                         Mobx Example
                     </Link>
+                    <Link to="/api-example" className="bg-green-400 rounded-lg p-2 m-3">
+                        API Example
+                    </Link>
                 </div>
             </div>
         </>
@@ -55,3 +56,6 @@ export const Home = observer((props: StoreType) => {
 
 }
 ) 
+
+
+
